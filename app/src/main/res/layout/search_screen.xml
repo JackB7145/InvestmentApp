@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="281dp"
+        android:layout_height="62dp"
+        android:autofillHints="Symbol"
+        android:ems="10"
+        android:hint="Search By Ticker"
+        android:inputType="textPersonName"
+        android:onClick="tickerSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="backtoMain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/arrow" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="388dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stockpriceText"
+                android:layout_width="372dp"
+                android:layout_height="39dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00000000"
+                android:fontFamily="sans-serif-medium"
+                android:text="Stock Price"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/stocknameText"
+                android:layout_width="373dp"
+                android:layout_height="33dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00000000"
+                android:fontFamily="sans-serif-medium"
+                android:text="Stock Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/stockdescText"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00000000"
+                android:fontFamily="sans-serif-medium"
+                android:text="Stock Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/stockexchangeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock Exchange"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/stockcurrencyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Currency"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/stockcountryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
